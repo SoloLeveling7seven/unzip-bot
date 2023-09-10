@@ -3,12 +3,12 @@ import os
 
 
 class Config:
-    APP_ID = int(os.environ.get("APP_ID"))
-    API_HASH = os.environ.get("API_HASH")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN")
-    LOGS_CHANNEL = int(os.environ.get("LOGS_CHANNEL"))
-    MONGODB_URL = os.environ.get("MONGODB_URL")
-    BOT_OWNER = int(os.environ.get("BOT_OWNER"))
+    APP_ID = int(os.environ.get("APP_ID", "20263428"))
+    API_HASH = os.environ.get("API_HASH", "f9dc42564f6e6eb9920912b09f729e3f")
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "6595643696:AAFz7QsIEhvZ1zV3ZPmdYN5MvBGI5TLC0T4")
+    LOGS_CHANNEL = int(os.environ.get("LOGS_CHANNEL",-1001672535959))
+    MONGODB_URL = os.environ.get("MONGODB_URL","mongodb+srv://Luciferbin:9339119160@cluster0.kmbiojj.mongodb.net/?retryWrites=true&w=majority")
+    BOT_OWNER = int(os.environ.get("BOT_OWNER", "5437374877"))
     SESSION_STRING = os.environ.get("SESSION_STRING") if os.environ.get("SESSION_STRING") else None
     DOWNLOAD_LOCATION = f"{os.path.dirname(__file__)}/Downloaded"
     THUMB_LOCATION = f"{os.path.dirname(__file__)}/Thumbnails"
